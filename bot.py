@@ -9,77 +9,85 @@ from threading import Thread
 from pyowm import OWM
 
 cl = LINETCR.LINE()
-cl.login(token="EmBDgrBFhXJpY7dQzZu8.bfmfUwtccO+1N7EuVwD+Ma.oabpihLvt98qEpaxEnGT4qSW74hTzicNwJckxwLcpE8=")
+cl.login(token="")
 cl.loginResult()
 
 kk = LINETCR.LINE()
-kk.login(token="Em6CHjpD7QHn365mI8W3.b151yOadpUwvZ3Q/9r80aW.Y+WFbQfwESXytbkaiuiplEfgEDDPDJsUjPZN05o3m7E=")
+kk.login(token="")
 kk.loginResult()
 
 ki = LINETCR.LINE()
-ki.login(token="Em8WPZacfeoF9ioyZCHd.UvZQ8iaX1kDhGbAShThZ3q.1EiTKut1Z/eHFNGn899abavIZp5/zxPm6L7+A82m/Q0=")
+ki.login(token="")
 ki.loginResult()
 
 kc = LINETCR.LINE()
-kc.login(token="Em1nLzLCVz0cQlC9Pt7b.VHH0q0Dhr8pSns5/+RsmgW.Dnfdg/UrkMwX9f8syDlWvDsktEIBNGA0j9YbZzitloU=")
+kc.login(token="")
 kc.loginResult()
 
 print "Login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage =""" 􀜁􀅹Salute􏿿 | Keyboard Member | 􀜁􀅹Salute􏿿
+helpMessage ="""╔════════════════╗
+║〘ᏢᏌᏴᏞᏆᏟ ᏟᎾᎷᎷᎪNᎠ〙
+╠════════════════╣
+║                〘ᏆᎠ〙
+║              〘ᎷᏆᎠ〙  
+║             〘ᎪᏞᏞ ᎷᏆᎠ〙
+║                〘ᎷᎬ〙
+║             〘ᴊᎾᏆN ᎪᏞᏞ〙
+║           〘ᏌᏚᏆᎡ 1/2/3/4〙
+║             〘ᏩᎡᎾᏌᏢ ᏆᎠ〙
+║              〘ᎢᏞ : "+"〙
+║              〘ᏟᏞᎾᏟK :〙
+║             〘ᏌᏢ ᏟᏞᎾᏟK〙
+║             〘NᎪᎷᎬ : + 〙
+║             〘ᎷᏆᏟ〙"ᎷᏆᎠ" 〙
+║  〘ᎡᎬᏓᎬᏟᎢ〙"ᏆNᏙᏆᎢᎬ" 〙
+║[Massage add: "text"]:
+║[Add confirmasi]:
+║[Comment set : "Text"]:
+║[Comment check]:
+║[Clock: on]: "Clock name on"
+║[Clock: off]: "Clock name off"
+║[Ban]: "Add blacklist"
+║[Unban]: "Dalate blacklist"
+║[Banlist]: "Check blacklist"
+╠════════════╗
+║〚C͓̳͓O͓̳͓M͓̳͓M͓̳͓A͓̳͓N͓̳͓D͓̳͓ ͓S͓̳͓E͓̳͓T͓̳͓〛║
+╠════════════╝
+║[Contact: on/off]: 
+║[Auto join: on/off]: 
+║[Auto join: on/off]: 
+║[Cancel Invite: 1 on/off]:
+║[Auto share: on/off]:
+║[Auto leave: on/off]: 
+║[Comment: on/off]: 
+║[Auto add: on/off]: 
+║[Auto like: on/off]: 
+╠══════════════╗	
+║⟦ϲ̳̳̋ο̳̳̋м̳̳̋м̳̳̋α̳̳̋и̳̳̋∂̳̳̋ ̳̳̋ι̳̳̋и̳̳̋ ̳̳̋g̳̳̋я̳̳̋ο̳̳̋υ̳̳̋ρ̳̳̋⟧║
+╠══════════════╝
+║[Ban " @Tag]: 
+║[Unban " @Tag]: 
+║[Urlon]: "Open urL"
+║[Urloff]: "Closed urL"
+║[Url]: " Check urL room"
+║[Ginfo]: "~÷~ data room"
+║[Invite: "mid"]: 
+║[Say: "Text"]: "Kicker talk"
+║[Cancel]: "Cancel invite"
+║[Gns: "name"]:"Change Gname"
+║[NKs: "Name"]:
+║[Dead]: "Kick Blacklist"
+║[Protect: on/off]:
+║[Block url: on/off]:
+║[Namelock: on/off]:
+║[Blockinvite: on/off]: 
+╚═══════════════════╝
 
-[􀜁􀅹Salute􏿿] Hi  (yah begitulah)
-[􀜁􀅹Salute􏿿] Creator ( Creator / Admin )
-[􀜁􀅹Salute􏿿] Me ( Info Contact )
-[􀜁􀅹Salute􏿿] Gift ( Gift Thema )
-[􀜁􀅹Salute􏿿] Ginfo ( Group info )
-[􀜁􀅹Salute􏿿] Welcome ( yah begitulah )
-[􀜁􀅹Salute􏿿] Cancel ( Cancel member pending )
-[􀜁􀅹Salute􏿿] Tagall ( Tagall member group )
-[􀜁􀅹Salute􏿿] pp @tag ( PP yang di tag )
-[􀜁􀅹Salute􏿿] cover @tag ( Cover yang di tag )
-[􀜁􀅹Salute􏿿] Kedapkedip ( Teks kekinian 􀜁􀅔Har Har􏿿 , Contoh : Kedapkedip  )
-[􀜁􀅹Salute􏿿] /apakah ( Kerang ajaib )
-[􀜁􀅹Salute􏿿] /translate-en ( Translate Indo - EN , Contoh : /translate-en Grup ) 
-[􀜁􀅹Salute􏿿] /set ( Set point )
-[􀜁􀅹Salute􏿿] /check ( Check sider )
-[􀜁􀅹Salute􏿿] /lagu ( Cari lagu , Contoh : /lagu iwan fals ibu )
-[􀜁􀅹Salute􏿿] /lirik ( Cari Lirik , Contoh : /lirik Payung teduh Akad )
-[􀜁􀅹Salute􏿿] /ig ( Cek profile Instagram , Contoh : /ig instagram )
-[􀜁􀅹Salute􏿿] /youtube ( Scrap link youtube , Contoh : /youtube young dumb & broke )
-
-􀜁􀅹Salute􏿿 | Keyboard (Admin) | 􀜁􀅹Salute􏿿
-
-[􀜁􀅹Salute􏿿] bye # Mengusir Bot (Di Aktifin Admin)
-[􀜁􀅹Salute􏿿] /unban > Tidak Di Banned
-[􀜁􀅹Salute􏿿] /ban > Target Di Banned
-[􀜁􀅹Salute􏿿] join > Membawa Pasukan (4 Bot)
-[􀜁􀅹Salute􏿿] ourl > Open Link Grup *Tanpa Staaff/Admin
-[􀜁􀅹Salute􏿿] curl > Menutup Link Grup *Tanpa Staff/Admin
-[􀜁􀅹Salute􏿿] /spam (Jumlah) (Kata) > Menyempam Kata
-
-[􀜁􀅹Salute􏿿] /nk @tag -> Mengkick Target
-[􀜁􀅹Salute􏿿] /bcgc -> Untuk Broadcast Group
-[􀜁􀅹Salute􏿿] /bc -> Untuk Broadcast Melalui Pc
-[􀜁􀅹Salute􏿿] /grup id -> Mengentahui Grup List
-[􀜁􀅹Salute􏿿] /bio -> Mengedit Bio
-[􀜁􀅹Salute􏿿] /gn -> Mengganti Nama Grup
-[􀜁􀅹Salute􏿿] /cn -> Mengganti Nama Bot 1,2,3,4
-[􀜁􀅹Salute􏿿] /removechat -> remove chat
-[􀜁􀅹Salute􏿿] kill -> kick yang ban
-
-[􀜁􀅹Salute􏿿] contact on/off
-[􀜁􀅹Salute􏿿] join on/off
-[􀜁􀅹Salute􏿿] Gcancel on/off
-[􀜁􀅹Salute􏿿] leave on/off
-[􀜁􀅹Salute􏿿] protect on/off
-[􀜁􀅹Salute􏿿] qr on/off
-[􀜁􀅹Salute􏿿] invite on/off
-[􀜁􀅹Salute􏿿] cancel on/off
-
-[􀜁􀅹Salute􏿿] Mulai -> Meratakan  [􀜁􀅹Salute􏿿]"""
+[By.❦〖Pђëŧ〗☞ᵀËÄMທஇລ❂قB❂T✓]
+"""
 
 KAC=[cl,ki,kk,kc]
 dmid = cl.getProfile().mid
@@ -1037,7 +1045,7 @@ def bot(op):
                         else:
                             cl.sendText(msg.to,"Cancel Protection Invite OFF")
 #------------------------------ STATUS BOT ----------------------------------
-            elif "/status" in msg.text.lower():
+            elif "#cmd" in msg.text.lower():
                 md = ""
                 if wait["contact"] == True: md+="[*] Contact : on\n"
                 else: md+="[*] Contact : off\n"
@@ -1314,9 +1322,9 @@ def bot(op):
                                 print error
                                 cl.sendText(msg.to,"Upload image failed.")
 
-            elif "Cover @" in msg.text:
+            elif "hack @" in msg.text:
                 if msg.toType == 2:
-                    cover = msg.text.replace("Cover @","")
+                    cover = msg.text.replace("hack @","")
                     _nametarget = cover.rstrip('  ')
                     gs = cl.getGroup(msg.to)
                     targets = []
@@ -1336,9 +1344,9 @@ def bot(op):
                                 cl.sendText(msg.to,"Upload image failed.")
 #----------------------------------------------------------------------------
 #-------------------------------- PP BY TAG ---------------------------------
-            elif "pp @" in msg.text:
+            elif "hack3 @" in msg.text:
                 if msg.toType == 2:
-                    cover = msg.text.replace("pp @","")
+                    cover = msg.text.replace("hack3 @","")
                     _nametarget = cover.rstrip('  ')
                     gs = cl.getGroup(msg.to)
                     targets = []
@@ -1356,9 +1364,9 @@ def bot(op):
                                 print error
                                 cl.sendText(msg.to,"Upload image failed.")
 
-            elif "Pp @" in msg.text:
+            elif "hack2 @" in msg.text:
                 if msg.toType == 2:
-                    cover = msg.text.replace("Pp @","")
+                    cover = msg.text.replace("hack2 @","")
                     _nametarget = cover.rstrip('  ')
                     gs = cl.getGroup(msg.to)
                     targets = []
@@ -1501,7 +1509,7 @@ def bot(op):
                 kc.sendText(msg.to,"Come Back ????Salute??")
 #----------------------------------------------------------------------------
 #------------------------------ RESPON SPEED --------------------------------
-            elif msg.text.lower() in ["respon"]:
+            elif msg.text.lower() in ["respon","#sp"]:
                 start = time.time()
                 cl.sendText(msg.to, "Progress...")
                 elapsed_time = time.time() - start
